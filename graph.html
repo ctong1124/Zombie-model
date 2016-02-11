@@ -30,10 +30,6 @@
 				</div>
 			</div>
 		</div>
-
-
-
-		<p class="red"> red for zombies, <span class="blue">blue for humans</span></p>
 		
 		<div id="graph" class="aGraph" ></div>
 
@@ -47,64 +43,54 @@
 				       <!-- <p class="top">Initial population of humans</p> -->
 				        <!-- <input type="text" id="h0"/> -->
 				        <label for="humanpop"><p>Initial population of humans</p></label>
+				        <div class="slider">
 				        <input type="range" min="0" max="10000" value="50" id="h0" step="1" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i>
-				        <output for="humanpop" id="h0o">50</output>
-				         <i class="fa fa-plus"></i>
+				        <i class="fa fa-minus"></i><output for="humanpop" id="h0o">50</output><i class="fa fa-plus"></i>
+				    	</div>
 			    	</div>
 			    	<div class="input-line">
 				      <!--  <p>Initial population of zombies</p>
 				        <input type="text" id="z0"/> -->
 				        <label for="zombiepop"><p>Initial population of zombies</p></label>
 				        <input type="range" min="0" max="10000" value="1000" id="z0" step="1" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i>
-				        <output for="zombiepop" id="z0o">1000</output>
-			    		<i class="fa fa-plus"></i>
+
+				        <i class="fa fa-minus"></i><output for="zombiepop" id="z0o">1000</output><i class="fa fa-plus"></i>
+			    		
 			    	</div>
 			       <div class="input-line">
 				       <!-- <p>Number of zombies killed per human/week</p>
 				        <input type="text" id="a"/> -->
 				        <label for="a"><p>Average number of zombies killed per human/week</p></label>
 				        <input type="range" min="0" max="5" value=".5" id="a" step=".1" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i>
-				        <output for="a" id="ao">0.5</output>
-			    		<i class="fa fa-plus"></i>
+				        <i class="fa fa-minus"></i><output for="a" id="ao">0.5</output><i class="fa fa-plus"></i>
 			    	</div>
 			        <div class="input-line">
 				        <!-- <p>Zombie attacks on human/week</p>
 				        <input type="text" id="b"/> -->
 				        <label for="b"><p>Zombie attacks on human/week</p></label>
 				        <input type="range" min="0" max=".1" value=".0001" id="b" step=".0001" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i>
-				        <output for="b" id="bo">0.0001</output>
-				    	<i class="fa fa-plus"></i>
+				        <i class="fa fa-minus"></i><output for="b" id="bo">0.0001</output><i class="fa fa-plus"></i>
 				    </div>
 				    <div class="input-line">
 				        <!-- <p>Proportion of population dying a natural death/week</p>
 				        <input type="text" id="c"/> -->
 				        <label for="c"><p>Proportion of population dying a natural death/week</p></label>
 				        <input type="range" min="0" max="1" value=".02" id="c" step=".01" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i>
-				        <output for="c" id="co">0.02</output>
-				    	<i class="fa fa-plus"></i>
+				        <i class="fa fa-minus"></i><output for="c" id="co">0.02</output><i class="fa fa-plus"></i>
 				    </div>
 			        <div class="input-line">
 				       <!--  <p>Proportion of fights ending in death, not a new a zombie</p>
 				        <input type="text" id="d"/> -->
 				        <label for="d"><p>Proportion of fights ending in death, not a new a zombie</p></label>
 				        <input type="range" min="0" max="1" value=".1" id="d" step=".1" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i>
-				        <output for="d" id="do">0.1</output>
-				    	<i class="fa fa-plus"></i>
+				        <i class="fa fa-minus"></i><output for="d" id="do">0.1</output><i class="fa fa-plus"></i>
 				    </div>
 				    <div class="input-line">
 				        <!-- <p>Proportion of population giving birth/week</p>
 				        <input type="text" id="e"/> -->
 				        <label for="e"><p>Proportion of fights ending in death, not a new a zombie</p></label>
 				        <input type="range" min="0" max="1" value=".1" id="e" step=".1" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i>
-				        <output for="e" id="eo">0.1</output>
-				    	<i class="fa fa-plus"></i>
+				        <i class="fa fa-minus"></i><output for="e" id="eo">0.1</output><i class="fa fa-plus"></i>
 				    </div>
 			        <div class="input-line">
 				        <p>Weeks in Simulation</p>

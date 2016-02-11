@@ -274,37 +274,41 @@ p.top {
 
 #graph-page .input-fields .input-line {
   display: inline-block;
-  width: 100%;
+  width: 80%;
   float: left;
   margin: 0 1em;
+
 }
 
 #graph-page .container-1 input{
   width: 200%;
-  height: 2.25em;
-  background: #EBEBEB;
   border: none;
   font-size: 10pt;
-  /*float: left;*/
-  color: #63717f;
-  /*padding-left: 2.5em;*/
   -webkit-border-radius: .25em;
   -moz-border-radius: .25em;
   border-radius: .25em;
 }
 
-#graph-page .container-1 input[type=range]{
-  height: 1em;
-  margin-top: .5em;
-}
 
 output {
+  margin-top:.25em;
   color: white;
-  margin-top: .5em;
+  font-size: 1em;
+  /*margin-top: .5em;*/
+  background: #CCC;
+  height: 1em;
+  padding: .25em .4em .1em .4em;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  font: lato;
 }
 
 #graph-page i {
+  margin-top:.25em;
+  font-size: 1em;
   color: white;
+  background: #CCC;
+  padding: .25em;
 }
 
 
@@ -312,6 +316,101 @@ output {
   color: white;
   background-color: black;
   margin-top: 2em;
+}
+
+#graph-page .container-1 input[type=range]{
+  /*height: 1em;*/
+  margin-top: .5em;
+}
+
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 300px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
 }
 
 #graph-page #page {
@@ -327,11 +426,18 @@ output {
   color: #4f5b66;
 }
 
-#graph-page p {
-  margin: 1em 0 .1em 0 ;
+#graph-page  p {
+  color: white;
+}
+
+
+#graph-page .input-line p {
+  margin: 1.75em 0 0 0 ;
   color: white;
   font-size: .85em;
 }
+
+1.75em 0 0 0
 
 .red {
   color: red;
