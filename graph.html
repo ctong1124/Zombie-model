@@ -30,6 +30,26 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="section test-cases">
+			<div class="section-fixed">
+				<div class="col12">
+					<h2>Some interesting scenarios</h2>
+				</div>
+			</div>
+
+			<div class="section-fixed">
+				<div class="col4">
+					<div class="case left"></div>
+				</div>
+				<div class="col4">
+					<div class="case center"></div>
+				</div>
+				<div class="col4">
+					<div class="case right"></div>
+				</div>
+			</div>
+		</div>
 		
 		<div id="graph" class="aGraph" ></div>
 
@@ -44,61 +64,71 @@
 				        <!-- <input type="text" id="h0"/> -->
 				        <label for="humanpop"><p>Initial population of humans</p></label>
 				        <div class="slider">
-				        <input type="range" min="0" max="10000" value="50" id="h0" step="1" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i><output for="humanpop" id="h0o">50</output><i class="fa fa-plus"></i>
+					        <input type="range" min="0" max="10000" value="50" id="h0" step="1" oninput="numberUpdate(value,id)">
+					        <input type="number" id="h0o" min="0" max="10000" value="50" onChange="rangeUpdate(value,id)"></output>
 				    	</div>
 			    	</div>
 			    	<div class="input-line">
 				      <!--  <p>Initial population of zombies</p>
 				        <input type="text" id="z0"/> -->
 				        <label for="zombiepop"><p>Initial population of zombies</p></label>
-				        <input type="range" min="0" max="10000" value="1000" id="z0" step="1" oninput="outputUpdate(value,id)">
-
-				        <i class="fa fa-minus"></i><output for="zombiepop" id="z0o">1000</output><i class="fa fa-plus"></i>
-			    		
+				        <div class="slider">
+				        <input type="range" min="0" max="10000" value="1000" id="z0" step="1" oninput="numberUpdate(value,id)">
+						<input type="number" id="z0o" min="0" max="10000" value="1000"></input>
+						</div>			    		
 			    	</div>
 			       <div class="input-line">
 				       <!-- <p>Number of zombies killed per human/week</p>
 				        <input type="text" id="a"/> -->
 				        <label for="a"><p>Average number of zombies killed per human/week</p></label>
-				        <input type="range" min="0" max="5" value=".5" id="a" step=".1" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i><output for="a" id="ao">0.5</output><i class="fa fa-plus"></i>
+				        <div class="slider">
+					        <input type="range" min="0" max="5" value=".5" id="a" step=".1" oninput="numberUpdate(value,id)">
+					        <input type="number" id="ao" min="0" max="5" value=".5" step=".1"></input>
+				    	</div>
 			    	</div>
 			        <div class="input-line">
 				        <!-- <p>Zombie attacks on human/week</p>
 				        <input type="text" id="b"/> -->
 				        <label for="b"><p>Zombie attacks on human/week</p></label>
-				        <input type="range" min="0" max=".1" value=".0001" id="b" step=".0001" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i><output for="b" id="bo">0.0001</output><i class="fa fa-plus"></i>
+				        <div class="slider">
+					        <input type="range" min="0" max=".1" value=".0001" id="b" step=".0001" oninput="numberUpdate(value,id)">
+					        <input type="number" id="bo" min="0" max=".1" value=".0001" step=".0001"></input>
+					    </div>
 				    </div>
 				    <div class="input-line">
 				        <!-- <p>Proportion of population dying a natural death/week</p>
 				        <input type="text" id="c"/> -->
 				        <label for="c"><p>Proportion of population dying a natural death/week</p></label>
-				        <input type="range" min="0" max="1" value=".02" id="c" step=".01" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i><output for="c" id="co">0.02</output><i class="fa fa-plus"></i>
+				        <div class="slider">
+					        <input type="range" min="0" max="1" value=".02" id="c" step=".01" oninput="numberUpdate(value,id)">
+					        <input type="number" id="co" min="0" max="1" value=".02" step=".01"></input>
+					    </div>
 				    </div>
 			        <div class="input-line">
 				       <!--  <p>Proportion of fights ending in death, not a new a zombie</p>
 				        <input type="text" id="d"/> -->
 				        <label for="d"><p>Proportion of fights ending in death, not a new a zombie</p></label>
-				        <input type="range" min="0" max="1" value=".1" id="d" step=".1" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i><output for="d" id="do">0.1</output><i class="fa fa-plus"></i>
-				    </div>
+				        <div class="slider">
+					        <input type="range" min="0" max="1" value=".1" id="d" step=".1" oninput="numberUpdate(value,id)">
+					        <input type="number" id="do" min="0" max="1" value=".1" step=".1"></input>
+					   	</div>
+					</div>
 				    <div class="input-line">
 				        <!-- <p>Proportion of population giving birth/week</p>
 				        <input type="text" id="e"/> -->
 				        <label for="e"><p>Proportion of fights ending in death, not a new a zombie</p></label>
-				        <input type="range" min="0" max="1" value=".1" id="e" step=".1" oninput="outputUpdate(value,id)">
-				        <i class="fa fa-minus"></i><output for="e" id="eo">0.1</output><i class="fa fa-plus"></i>
-				    </div>
+				        <div class="slider">
+					        <input type="range" min="0" max="1" value=".1" id="e" step=".1" oninput="numberUpdate(value,id)">
+					        <input type="number" id="eo" min="0" max="1" value=".1" step=".1"></input>
+					   	</div>
+					</div>
 			        <div class="input-line">
 				        <p>Weeks in Simulation</p>
-				        <input type="text" id="it"/>
+				        <input type="number" id="it" min="0" value="10" step="1"/>
 				    </div>
 
 			        <div class="input-line">
-			       		 <input type="submit" id ="submit"value="Enter">
+			       		 <input type="submit" id ="submit" value="Run Simulation">
 			    	</div>
 			    </form>
 			  </div>
@@ -111,8 +141,13 @@
 
 	<script>
 
-	function outputUpdate(val, id) {
+	function numberUpdate(val, id) {
 		document.querySelector('#'+id+'o').value = val;
+	}
+
+	function rangeUpdate(val, id) {
+		newid = id.slice(0, id.length-1);
+		document.querySelector('#'+newid).value = val;
 	}
 
 	$(".fa").on("click", function(event){
@@ -293,7 +328,7 @@
 			graph.append("svg:g")
 			      .attr("class", "x axis")
 			      .attr("transform", "translate(0," + h + ")")
-			      .attr('fill', 'white')
+			      .attr('fill', '#615F63')
 			      .call(xAxis);
 			// create left yAxis
 			var yAxisLeft = d3.svg.axis().scale(y).ticks(4).orient("left");
@@ -301,7 +336,7 @@
 			graph.append("svg:g")
 			      .attr("class", "y axis")
 			      .attr("transform", "translate(0,0)")
-			      .attr('fill', 'white')
+			      .attr('fill', '#615F63')
 			      .call(yAxisLeft);
 			
   			// Add the line by appending an svg:path element with the data line we created above

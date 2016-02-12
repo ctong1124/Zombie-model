@@ -163,11 +163,57 @@ textarea {
     width: 8.33333%;
 }
 
+/*.tick-minor {
+  fill: #242425;
+}
+*/
 
 body {
   position: relative;
   background-color: #242525;
 }
+
+#graph-page .test-cases {
+  margin-bottom: 8em;
+  background: #615F63;
+  padding: 5em 0;
+}
+
+#graph-page .test-cases h2 {
+  margin-bottom: 1em;
+}
+
+#graph-page .case {
+  /*background-color: #CCC;*/
+  border: .25em solid white;
+  /*height: 14em;*/
+  margin: 2em auto 0 auto;
+  width: 60%;
+  padding-bottom: 60%;
+
+}
+ 
+.left {
+  margin-right: 1em;
+}
+
+.center {
+  margin: 0 1em;
+}
+
+.right {
+  margin-left: 1em;
+}
+
+#graph-page h2 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: white;
+  margin: 0;
+}
+
+
 
 #graph {
   float: left;
@@ -212,7 +258,7 @@ body {
 }
 
 #graph-page .intro {
-  margin: 5em 0 10em 0;
+  margin: 5em 0;
 }
 
 #graph-page .intro p {
@@ -226,7 +272,7 @@ body {
   shape-rendering: crispEdges;
 }
 #graph .x.axis line {
-  stroke: gray;
+  stroke: #101011;
 }
 #graph .x.axis .minor {
   stroke-opacity: .5;
@@ -250,9 +296,10 @@ p.top {
 #graph-page .input-fields {
   display: inline-block;
   position: relative;
-  height: 28em;
-  width: 10%;
-  float: left;
+  /*height: 28em;*/
+  width: 20em;
+  float: left;  
+  background: #333333;
 
 }
 
@@ -276,18 +323,44 @@ p.top {
   display: inline-block;
   width: 80%;
   float: left;
-  margin: 0 1em;
+  margin: 0 1.2em;
 
 }
 
-#graph-page .container-1 input{
-  width: 200%;
+input[type='number'] {
+  padding: .5em;
+  width: 6em;
+  border: none;
+  border-radius: 2px;
+  background-color: #555555;
+  color: white;
+}
+
+input[type='number']:out-of-range { 
+  background-color: #FF9F9A; 
+}
+
+input[type='number']#it {
+  width: 10em;
+}
+
+#graph-page .container-1 input[type="range"]{
+  margin-right: .75em;
+  margin-top: .5em;
+  width: 15em;
   border: none;
   font-size: 10pt;
   -webkit-border-radius: .25em;
   -moz-border-radius: .25em;
   border-radius: .25em;
 }
+
+.slider {
+  /*background:#F2EDF7;*/
+  width:20em;
+  padding: .5em 0;
+}
+
 
 
 output {
@@ -316,12 +389,16 @@ output {
   color: white;
   background-color: black;
   margin-top: 2em;
+  width: 10em;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 2px;
+  font-family: 'Alegreya Sans';
+  font-size: 1em;
 }
 
-#graph-page .container-1 input[type=range]{
-  /*height: 1em;*/
-  margin-top: .5em;
-}
+
+
 
 input[type=range] {
     /*removes default webkit styles*/
@@ -329,14 +406,11 @@ input[type=range] {
     
     /*fix for FF unable to apply focus style bug */
     border: 1px solid white;
-    
-    /*required for proper track sizing in FF*/
-    width: 300px;
 }
 input[type=range]::-webkit-slider-runnable-track {
     width: 300px;
     height: 5px;
-    background: #ddd;
+    background: #555555;
     border: none;
     border-radius: 3px;
 }
@@ -359,7 +433,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 input[type=range]::-moz-range-track {
     width: 300px;
     height: 5px;
-    background: #ddd;
+    background: #555555;
     border: none;
     border-radius: 3px;
 }
@@ -396,7 +470,7 @@ input[type=range]::-ms-fill-lower {
     border-radius: 10px;
 }
 input[type=range]::-ms-fill-upper {
-    background: #ddd;
+    background: #555555;
     border-radius: 10px;
 }
 input[type=range]::-ms-thumb {
@@ -432,12 +506,10 @@ input[type=range]:focus::-ms-fill-upper {
 
 
 #graph-page .input-line p {
-  margin: 1.75em 0 0 0 ;
-  color: white;
+  margin: 1em 0 0 0 ;
+  color: #D1D1D1;
   font-size: .85em;
 }
-
-1.75em 0 0 0
 
 .red {
   color: red;
