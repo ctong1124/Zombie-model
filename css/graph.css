@@ -108,6 +108,7 @@ textarea {
     float: left;*/
 }
 
+
 /* The Percentage-based grid, akin to bootstrap */
 .col1, 
 .col2, 
@@ -163,6 +164,19 @@ textarea {
     width: 8.33333%;
 }
 
+
+.mar-bottom-small {
+  margin-bottom: 2em;
+}
+
+.mar-bottom-med {
+  margin-bottom: 5em;
+}
+
+.mar-bottom-large {
+  margin-bottom: 8em;
+}
+
 /*.tick-minor {
   fill: #242425;
 }
@@ -174,9 +188,10 @@ body {
 }
 
 #graph-page .test-cases {
-  margin-bottom: 8em;
-  background: #615F63;
-  padding: 5em 0;
+  /*margin-bottom: 8em;*/
+  background: #333333;
+  padding: 9em 0;
+  height: 18em;
 }
 
 #graph-page .test-cases h2 {
@@ -189,7 +204,7 @@ body {
   /*height: 14em;*/
   margin: 2em auto 0 auto;
   width: 60%;
-  padding-bottom: 60%;
+  /*padding-bottom: 60%;*/
 
 }
  
@@ -212,6 +227,19 @@ body {
   color: white;
   margin: 0;
 }
+
+#graph-page .case h2{
+  text-align: center;
+  padding: 2em 1em;
+  margin: 0;
+}
+
+#graph-page h3{
+  font-weight: 500;
+  font-size: 1.25em;
+  color: white;
+}
+
 
 
 
@@ -519,9 +547,50 @@ input[type=range]:focus::-ms-fill-upper {
   color: blue;
 }
 
+.v-mathmodel {
+  
+}
 
+.v-mathmodel .eq  {
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+  height: 8em;
+  position: relative;
+}
 
+.v-mathmodel .eq div {
+  /*position: absolute;*/
+  top: 50%;
+  transform: translateY(-50%);
+}
 
+.section.v-mathmodel {
+  margin: 3em 0 4em 0;
+  background: #333333;
+  padding: 2em 0;
+}
+
+.variables p{
+  margin-right: 1em;
+}
+
+.variables {
+  margin-bottom: 3em;
+}
+
+.diff-eq .section-fixed{
+  width: 65%;
+  margin: 0 auto;
+  padding: 2em 0;
+  height: 5em;
+  margin-bottom: 5em;
+}
+
+.section.diff-eq {
+  background: #333333;
+  margin-bottom: 4em;
+}
 
 
 
