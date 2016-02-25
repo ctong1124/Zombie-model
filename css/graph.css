@@ -190,45 +190,153 @@ body {
 #graph-page .test-cases {
   /*margin-bottom: 8em;*/
   background: #333333;
-  padding: 9em 0;
-  height: 18em;
+  /*padding: 9em 0;*/
+  height: 32em;
+
+  position: relative;
+}
+
+#graph-page .test-cases.nopad {
+  padding: 4em 2em;
 }
 
 #graph-page .test-cases h2 {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
-#graph-page .case {
-  /*background-color: #CCC;*/
+#graph-page .test-cases .cases {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+#graph-page .cases .case {
+  transition: all 0.5s ease;
   border: .25em solid white;
   /*height: 14em;*/
-  margin: 2em auto 0 auto;
+  margin: 0 auto;
   width: 60%;
   /*padding-bottom: 60%;*/
+  cursor: pointer;
+  
+}
 
+#graph-page .cases .case:hover {
+  border: .25em solid #42D134;
+  color: #42D134 ;
+}
+
+#graph-page .cases .case h3{
+  transition: all 0.5s ease; ;
+}
+
+#graph-page .cases .case:hover h3{
+  color: #42D134 ;
 }
  
-.left {
+#graph-page .test-cases  .cases .case1 {
   margin-right: 1em;
 }
 
-.center {
-  margin: 0 1em;
+#graph-page .test-cases  .cases .case2 {
+  /*margin: 0 1em;*/
 }
 
-.right {
+#graph-page .test-cases .cases  .case3 {
   margin-left: 1em;
 }
+
+a {
+  text-decoration: none;
+  color: #8CC2F7;
+}
+
+
+#graph-page .case-descriptions .case {
+  display: none;
+  padding: 1.5em 2em;
+}
+#graph-page .case-descriptions .case .back-arrow {
+  padding: .75em .5em .5em .5em;
+  background-color: #111111;
+  width: 4em;
+  cursor: pointer;
+}
+
+#graph-page .case-descriptions .case .back-arrow:hover p, 
+#graph-page .case-descriptions .case .back-arrow:hover i {
+  transition: all 0.5s ease;
+  color: #42D134 ;
+}
+
+#graph-page .case-descriptions .case .back-arrow i {
+  padding-right: .5em;
+}
+
+#graph-page .case-descriptions .case .back-arrow p {
+  margin: 0;
+}
+
+#graph-page .case-descriptions .case1 .col6{
+  width: 45%;
+  margin-right: 1.5em;
+}
+
+#graph-page .case-descriptions .col3.try{
+  text-align: center;
+  /*padding: 0 1em;*/
+  margin-top: 2em;
+  cursor: pointer;
+
+}
+
+#graph-page .case-descriptions .case3 .col3.try{
+  margin-top: 5em;
+
+}
+
+#graph-page .case-descriptions .col3.try:hover {
+  transition: all 0.5s ease;
+}
+
+#graph-page .case-descriptions .col3.try p{
+  margin: 0;
+  padding: 0;
+}
+
+#graph-page .case-descriptions .col3.try h3{
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+}
+
+#graph-page .case-descriptions .col3.try h4{
+  text-transform: uppercase;
+  color: white;
+  border: .15em solid white;
+  padding: .5em;
+  width: 60%;
+  margin: 1em auto;
+}
+
+#graph-page .case-descriptions .col3.try:hover h4 {
+  transition: all 0.5s ease;
+  color: #42D134;
+  border: .15em solid #42D134;
+}
+
+
 
 #graph-page h2 {
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 2em;
   color: white;
   margin: 0;
 }
 
-#graph-page .case h2{
+#graph-page .cases .case h3{
   text-align: center;
   padding: 2em 1em;
   margin: 0;
@@ -261,12 +369,27 @@ body {
   stroke: #21D011;
 }
 
+#graph-page .key p{
+  padding: 0 1em;
+  margin: 0;
+  color: white;
+}
 
 
-/*#graph text{
+#graph-page .key .blue {
+  border: solid blue .2em;
+  padding: .5em 1em;
   color: white;
 
-}*/
+}
+
+#graph-page .key .green {
+  border: solid #21D011 .2em;
+  padding: .5em 1em;
+  margin-right: 1em;
+
+}
+
 
 #graph-page {
   font-family: 'Alegreya Sans', sans-serif;
@@ -274,7 +397,6 @@ body {
   float: left;
   display: block;
   position: relative;
-  /*text-transform: uppercase;*/
 }
 
 #graph-page h1 {
@@ -285,8 +407,41 @@ body {
   margin: 0;
 }
 
+#graph-page .info {
+  float: right;
+  padding: 1em;
+  color: #777777;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#graph-page .info .pulldown {
+  display: none;
+  background-color: #777777;
+  padding: 1em;
+  width: 8em;
+  float: right;
+  position: absolute;
+  top: 2.5em;
+  right: 1em;
+  z-index: 10000;
+}
+
+#graph-page .info .pulldown p {
+  font-size: 1rem;
+}
+
+#graph-page .info:hover{
+  transition: all 0.5s ease;
+  color: white;
+}
+
+#graph-page .info.active {
+  color: white;
+}
+
 #graph-page .intro {
-  margin: 5em 0;
+  margin: 2em 0;
 }
 
 #graph-page .intro p {
@@ -324,7 +479,7 @@ p.top {
 #graph-page .input-fields {
   display: inline-block;
   position: relative;
-  /*height: 28em;*/
+  height: 42em;
   width: 20em;
   float: left;  
   background: #333333;
@@ -336,9 +491,6 @@ p.top {
   height: 1em;
 }
 
-#graph-page .toolbar {
-    /*border-bottom: .1em solid #ccc;*/
-}
 
 #graph-page .container-1{
   width: 100%;
@@ -384,7 +536,7 @@ input[type='number']#it {
 }
 
 .slider {
-  /*background:#F2EDF7;*/
+ 
   width:20em;
   padding: .5em 0;
 }
@@ -395,21 +547,12 @@ output {
   margin-top:.25em;
   color: white;
   font-size: 1em;
-  /*margin-top: .5em;*/
   background: #CCC;
   height: 1em;
   padding: .25em .4em .1em .4em;
   border-right: 1px solid white;
   border-left: 1px solid white;
   font: lato;
-}
-
-#graph-page i {
-  margin-top:.25em;
-  font-size: 1em;
-  color: white;
-  background: #CCC;
-  padding: .25em;
 }
 
 
@@ -571,13 +714,20 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 2em 0;
 }
 
-.variables p{
+#graph-page .variables p{
   margin-right: 1em;
 }
 
-.variables {
+#graph-page .variables {
   margin-bottom: 3em;
 }
+
+#graph-page .variables .vars p{
+  color: #42D134;
+}
+
+
+
 
 .diff-eq .section-fixed{
   width: 65%;
@@ -685,6 +835,54 @@ input[type=range]:focus::-ms-fill-upper {
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
+}
+
+@media only screen and (max-width: 700px) {
+
+html, body {
+    font-size: 18px;
+}
+
+.col1, 
+.col2, 
+.col3, 
+.col4, 
+.col5, 
+.col6, 
+.col7, 
+.col8, 
+.col9, 
+.col10, 
+.col11,
+.col12 {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+
+.section-fixed {
+    width: 80%;
+}
+
+
+#graph-page .test-cases {
+  padding-top: 3em;
+}
+
+#graph-page .test-cases .cases .case {
+  margin: 0 auto 1em auto;
+}
+
+/*#graph-page .test-cases .cases .case.case1  {
+  margin:;
+}
+
+#graph-page .test-cases .cases .case.case2  {
+  margin-left: 0;
+}*/
+
+
 }
 
 /* ==========================================================================

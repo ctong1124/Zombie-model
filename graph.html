@@ -16,6 +16,7 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
+        <script src="js/graphpage.js"></script>
 	</head>
 	<body>
 
@@ -23,7 +24,12 @@
 
 	<div id = "graph-page">
 
-
+		<div class="info">
+			<i class="fa fa-info-circle"></i>
+			<div class="pulldown">
+				<p>This is the work of <a href="carisatong.com" target="_blank">Carisa Tong</a> for Northeastern University's Mathematics major senior capstone. Some content taken from <a href="http://kevinboone.net/zom.html" target="_blank"> Kevin Boone's &ldquo;Night of the living differential equations&rdquo;</a>.</p>
+			</div>
+		</div>
 
 		<div class="section intro">
 			<div class="section-fixed">
@@ -105,14 +111,14 @@
 
 		<div class="section variables">
 			<div class="section-fixed ">
-				<div class="col4">
+				<div class="col4 vars">
 					<p>$a$ = number of zombies killed/human/unit time </p>
 					<p>$b$ = attacks by a zombie on a human/unit time </p>
 					<p>$c$ = percent of natural deaths of human/unit time </p>
 				</div>
-				<div class="col8">
+				<div class="col8 vars">
 					<p>$d$ = proportion of zombie-human encounter that ends in human death with no new zombie </p>
-					<p>$e$ = human births per human/unit time</p>
+					<p>$e$ = Birth rate/unit time</p>
 					<br><br>
 				</div>
 				<div class="col8">
@@ -159,21 +165,96 @@
 				last one: zombies debrained per human/unit time -->
 		<div class="section mar-bottom-med">
 			<div class="section-fixed test-cases">
-				<div class="col4">
-					<div class="case left">
-						<h2>Fatal vs. non-fatal zombie attacks </h2>
+				<div class="cases">
+					<div class="col4">
+						<div class="case case1">
+							<h3>Large vs. small initial human populations</h3>
+						</div>
+					</div>
+					<div class="col4">
+						<div class="case case2">
+							<h3>Zombie debraining rate</h3>
+						</div>
+					</div>
+					<div class="col4">
+						<div class="case case3">
+							<h3>Fatal vs. non-fatal zombie attacks </h3>
+						</div>
 					</div>
 				</div>
-				<div class="col4">
-					<div class="case center">
-						<h2> Large vs. small intial human populations </h2>
+				<div class="case-descriptions">
+					<div class="case case1">
+						<div class="back-arrow">
+							<p><i class="fa fa-chevron-left"></i> Back</p>
+						</div>
+						<h3>Large vs. small initial human populations</h3>
+						<div class="col6">
+							<p> In this case have a population of generally skilled survivors with a pretty large birth rate or influx of other survivors. In the case of a large human population, the zombie population is quickly depreciated like you would think. But even with a small group of survivors, they still overtake the zombie population within 40 weeks. You can see that with less humans, there is a smaller prey pool and less humans are being added to the zombie population. In the real world, we can also see a smaller group as advantageous because there is less splitting of resources and shelter. </p>
+						</div>
+						<div class="col3 try">
+							<p>Initial human population</p>
+							<h3 class="var">10000</h3>
+							<h4>Try this</h4>
+						</div>
+						<div class="col3 try">
+							<p>Initial human population</p>
+							<h3 class="var">50</h3>
+							<h4>Try this</h4>
+						</div>
+
+					</div>
+
+					<div class="case case2">
+						<div class="back-arrow">
+							<p><i class="fa fa-chevron-left"></i> Back</p>
+						</div>
+						<h3>Zombie debraining rate</h3>
+						<div class="col5">
+							<p>The end of the zombie apocalypse has a lot to do with the amount of zombies that humans can take out at a time. In this case, we start with a small human population and moderate If, on average, a human can take out one zombie every 8 weeks ($a$= 0.12), then the zombie apocalypse will end in about 20 years. Any less than that, the apocalypse will continue indefinitely. Since that rate is a very conservative level, you can expect the apocalypse to end much faster than 20 years.  </p>
+						</div>
+						<div class="col1"></div>
+						<div class="col3 try">
+							<p>Average number of zombies killed per human/week</p>
+							<h3 class="var">0.12</h3>
+							<h4>Try this</h4>
+						</div>
+						<div class="col3 try">
+							<p>Average number of zombies killed per human/week</p>
+							<h3 class="var">0.13</h3>
+							<h4>Try this</h4>
+						</div>
+					</div>
+
+					<div class="case case3">
+						<div class="back-arrow">
+							<p><i class="fa fa-chevron-left"></i> Back</p>
+						</div>
+						<h3>Fatal vs. non-fatal zombie attacks</h3>
+						<div class="col6">
+							<p> &ldquo;Not all zombie attacks will necessarily result in a passing of the contagion. In some cases, the victim might be completely consumed. We've been assuming so far that all attacks do result in zomification of the victim, because this is the worst case. This is likely to be a realistic scenario where the population is relatively dispersed: zombies are slow and not very smart, and humans that are attacked usually escape, but only after being passed the infectious agent.</p>
+
+							<p>In the early stages of conflict, when we are assuming that zombies outnumber humans considerably, the population levels are only slightly affected by whether human victims become zombies or not. After all, the human population loses a member either way, and the increase in the zombie population is likely to be proportionately insignificant. It is when the zombie numbers start to fall that the outcome of a zombie attack makes a difference.&rdquo;</p>
+
+							<p>-via <a href="http://kevinboone.net/zom.html" target="_blank">&ldquo;Night of the living differential equations&rdquo;</a> by Kevin Boone</p>
+						</div>
+						<div class="col3 try">
+							<p>Zombie Fatality Proportion</p>
+							<h3 class="var">0</h3>
+							<h4>Try this</h4>
+						</div>
+						<div class="col3 try">
+							<p>Zombie Fatality Proportion</p>
+							<h3 class="var">0.001</h3>
+							<h4>Try this</h4>
+						</div>
 					</div>
 				</div>
-				<div class="col4">
-					<div class="case right">
-						<h2>Human debraining rate</h2>
-					</div>
-				</div>
+			</div>
+		</div>
+
+		<div class="section key">
+			<div class="section-fixed">
+				<p><span class="green">zombies</span> <span class="blue">humans</span></p>
 			</div>
 		</div>
 		
@@ -200,8 +281,8 @@
 			       <div class="input-line">
 				        <label for="a"><p>Average number of zombies killed per human/week</p></label>
 				        <div class="slider">
-					        <input type="range" min="0" max="5" value=".5" id="a" step=".1" oninput="numberUpdate(value,id)">
-					        <input type="number" id="ao" min="0" max="5" value=".5" step=".1" onChange="rangeUpdate(value,id)"></input>
+					        <input type="range" min="0" max="5" value=".5" id="a" step=".001" oninput="numberUpdate(value,id)">
+					        <input type="number" id="ao" min="0" max="5" value=".5" step=".001" onChange="rangeUpdate(value,id)"></input>
 				    	</div>
 			    	</div>
 			        <div class="input-line">
@@ -214,22 +295,22 @@
 				    <div class="input-line">
 				        <label for="c"><p>Proportion of population dying a natural death/week</p></label>
 				        <div class="slider">
-					        <input type="range" min="0" max="1" value=".02" id="c" step=".01" oninput="numberUpdate(value,id)">
-					        <input type="number" id="co" min="0" max="1" value=".02" step=".01" onChange="rangeUpdate(value,id)"></input>
+					        <input type="range" min="0" max="1" value=".02" id="c" step=".001" oninput="numberUpdate(value,id)">
+					        <input type="number" id="co" min="0" max="1" value=".02" step=".001" onChange="rangeUpdate(value,id)"></input>
 					    </div>
 				    </div>
 			        <div class="input-line">
 				        <label for="d"><p>Proportion of fights ending in death, not a new a zombie</p></label>
 				        <div class="slider">
-					        <input type="range" min="0" max="1" value=".1" id="d" step=".1" oninput="numberUpdate(value,id)">
-					        <input type="number" id="do" min="0" max="1" value=".1" step=".1" onChange="rangeUpdate(value,id)"></input>
+					        <input type="range" min="0" max="1" value=".1" id="d" step=".001" oninput="numberUpdate(value,id)">
+					        <input type="number" id="do" min="0" max="1" value=".1" step=".001" onChange="rangeUpdate(value,id)"></input>
 					   	</div>
 					</div>
 				    <div class="input-line">
-				        <label for="e"><p>Proportion of fights ending in death, not a new a zombie</p></label>
+				        <label for="e"><p>Birth rate/unit time</p></label>
 				        <div class="slider">
-					        <input type="range" min="0" max="1" value=".1" id="e" step=".1" oninput="numberUpdate(value,id)">
-					        <input type="number" id="eo" min="0" max="1" value=".1" step=".1" onChange="rangeUpdate(value,id)"></input>
+					        <input type="range" min="0" max="1" value=".1" id="e" step=".001" oninput="numberUpdate(value,id)">
+					        <input type="number" id="eo" min="0" max="1" value=".1" step=".001" onChange="rangeUpdate(value,id)"></input>
 					   	</div>
 					</div>
 			        <div class="input-line">
@@ -250,241 +331,6 @@
 
 
 	<script>
-
-	function numberUpdate(val, id) {
-		document.querySelector('#'+id+'o').value = val;
-	}
-
-	function rangeUpdate(val, id) {
-		newid = id.slice(0, id.length-1);
-		document.querySelector('#'+newid).value = val;
-	}
-
-	
-
-
-	//draw graph 
-	$( document ).ready(function() {
-	    processData();
-	});
-
-	$("#myform").on("submit", function(event){
-		event.preventDefault();
-
-		processData();
-		
-	});
-
-	function processData() {
-		hdata = [];
-		zdata = [];
-
-		var a, b, c, d, e, it;
-		
-		h0 = parseFloat($('#h0').val());
-		z0 = parseFloat($('#z0').val());
-
-
-		a = parseFloat($('#a').val());
-		b = parseFloat($('#b').val());
-		c = parseFloat($('#c').val());
-		d = parseFloat($('#d').val());
-		e = parseFloat($('#e').val());
-
-		it = parseFloat($('#it').val());
-
-		console.log(a, b, c, d, e, it);
-
-		for (i = 0; i <= it; i++) {
-			hdata.push(h0);
-			zdata.push(z0);
-			result = run_model(h0, z0, a, b, c, d, e);
-			h0 = result[0];
-			z0 = result[1];
-
-		}
-
-		draw(hdata, zdata);
-	}
-
-	var m, w, h;
-
-	function draw(hvalues, zvalues) {
-		d3.select("#graph")
-			.html("");
-
-		
-
-		// define dimensions of graph
-		m = [50, 40, 50, 80]; // margins
-		w = $( window ).width()*.66 - m[1] - m[3] -10; // width
-		h = window.innerHeight - m[0] - m[2] ; // height
-		
-		// X scale will fit all values from data[] within pixels 0-w
-		var x = d3.scale.linear().domain([0, hvalues.length]).range([0, w]);
-		
-		// Y scale will fit values from 0-10 within pixels h-0 (Note the inverted domain for the y-scale: bigger is up!)
-		var max;
-		var max_of_humans = Math.max.apply(Math, hvalues);
-		var max_of_zombies = Math.max.apply(Math, zvalues);
-		if (max_of_humans>max_of_zombies) {
-			max = max_of_humans;
-		}
-		else {
-			max = max_of_zombies;
-		}
-		
-		var y = d3.scale.linear().domain([0, max]).range([h, 0]);
-		
-
-		// create a line function that can convert data[] into x and y points
-		var line = d3.svg.line()
-			// .interpolate("cardinal") 
-			// assign the X function to plot our line as we wish
-			.x(function(d,i) { 
-				// return the X coordinate where we want to plot this datapoint
-				return x(i); 
-			})
-			.y(function(d) { 
-				// return the Y coordinate where we want to plot this datapoint
-				return y(d); 
-			})
-			// Add an SVG element with the desired dimensions and margin.
-			var graph = d3.select("#graph").append("svg:svg")
-				.attr("width", w + m[1] + m[3])
-				.attr("height", h + m[0] + m[2])
-				.append("svg:g")
-				.attr("transform", "translate(" + m[3] + "," + m[0] + ")");
-			// create xAxis
-			var xAxis = d3.svg.axis().scale(x).tickSize(-h).tickSubdivide(true);
-			// Add the x-axis.
-			graph.append("svg:g")
-			      .attr("class", "x axis")
-			      .attr("transform", "translate(0," + h + ")")
-			      .attr('fill', '#615F63')
-			      .call(xAxis);
-			// create left yAxis
-			var yAxisLeft = d3.svg.axis().scale(y).ticks(4).orient("left");
-			// Add the y-axis to the left
-			graph.append("svg:g")
-			      .attr("class", "y axis")
-			      .attr("transform", "translate(0,0)")
-			      .attr('fill', '#615F63')
-			      .call(yAxisLeft);
-			
-  			// Add the line by appending an svg:path element with the data line we created above
-			// do this AFTER the axes above so that the line is above the tick-lines
-  			graph.append("svg:path")
-  				.attr("d", line(hvalues))
-  				.attr("class", "humans");
-  			graph.append("svg:path")
-  				.attr("d", line(zvalues))
-  				.attr("class", "zombies");
-  			made_graph_already= 1;
-
-  			graph.append("svg:text")
-  			    .attr("class", "x label")
-  			    .attr("text-anchor", "end")
-  			    .attr("x", w/2)
-  			    .attr("y", h + 40)
-  			    .text("Weeks")
-  			    .attr('fill', 'white');
-
-  			graph.append("svg:text")
-  			    .attr("class", "y label")
-  			    .attr("text-anchor", "end")
-  			    .attr("x", -250)
-  			    .attr("y", -70)
-  			    .attr("dy", ".5em")
-  			    .text("Population")
-  			    .attr('fill', 'white')
-  			    .attr("transform", "rotate(-90)");
-  			    
-	}
-
-	function run_model (h0, z0, a, b, c, d, e) {
-	    h1 = h0 + (e*h0) - (c*h0) - (b * h0 * z0);
-	    z1 = z0 + (1 - d)*(b*h0*z0) - (a*h0);
-
-	    if (h1 < 1){
-	        h1 = 0;
-	    }
-	    if (z1 < 1){
-	        z1 = 0
-	    }
-
-	    return [h1, z1];
-	}
-	
-	//resize event 
-	d3.select(window).on('resize', processData);
-
-
-
-
-	// var hoverLineGroup = d3.select("g").append("g").attr("class", "hover-line");
-	// // add the line to the group
-	// var hoverLine = hoverLineGroup
-	// 		.append("svg:line")
-	// 			.attr("x1", 10).attr("x2", 10) // vertical line so same value on each
-	// 			.attr("y1", 0).attr("y2", h)
-	// 			.attr("fill", "green"); // top to bottom
-
-
-	
-	// add the line to the group
-	// var hoverLine = d3.select("g")
-	// 	.append("line")
-	// 	.attr("class", "hover-line")
-	// 	.attr("x1", 10).attr("x2", 10) // vertical line so same value on each
-	// 	.attr("y1", 0).attr("y2", h)
-	// 	.attr("fill", "green"); // top to bottom
-
-	// console.log(d3.select("#graph"));
-
-	var vertical = d3.select("#graph").selectAll("path")
-	        .append("div")
-	        .attr("class", "remove")
-	        .style("position", "absolute")
-	        .style("z-index", "19")
-	        .style("width", "1px")
-	        .style("height", "380px")
-	        .style("top", "10px")
-	        .style("bottom", "30px")
-	        .style("left", "0px")
-	        .style("background", "yellow");
-
-	d3.select("#graph")
-	     .on("mousemove", function(){  
-	        mousex = d3.mouse(this);
-	        mousex = mousex[0] + 5;
-	        vertical.style("left", mousex + "px" )})
-	     .on("mouseover", function(){  
-	        mousex = d3.mouse(this);
-	        mousex = mousex[0] + 5;
-	        vertical.style("left", mousex + "px")});
-
-
-
-
-	function mousemove() {
-
-		console.log(d3.mouse(this));
-	   /* var x0 = x.invert(d3.mouse(this)[0]),
-	        i = bisectDate(data, x0, 1),
-	        d0 = data[i - 1],
-	        d1 = data[i],
-	        d = x0 - d0.date > d1.date - x0 ? d1 : d0;*/
-	    // focus.attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
-	    // focus.select("text").text(formatCurrency(d.close));
-	  }
-
-	  
-
-	// d3.select("svg").on("mousemove", mousemove); 
-
-
-		
 
 	
 			
